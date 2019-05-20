@@ -1,0 +1,86 @@
+.main{
+  background-color: #2e4359;
+  color: #ececee;
+
+}
+header p{
+  display: inline-block;
+}
+#score-card,.col{
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 1.3em;
+}
+#quiz-tag{
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 5em;
+  margin-bottom: 0px;
+
+}
+
+#score-card{
+  margin-bottom: 0px;
+  margin-top: 40px;
+  font-size: 2em;
+  float: right;
+}
+#question{
+  font-family: 'Stylish', sans-serif;
+  font-size: 3em;
+
+}
+.quiz-content{
+  margin: 50px;
+  /* border: 5px solid white; */
+  padding: 20px 30px 30px 30px;
+}
+
+.col{
+  background-color: #ececee;
+  color: #2e4359;
+  border: 1px solid #04b9d9;
+  padding: 20px;
+  transition: 0.4s;
+}
+
+.col:hover{
+  /* background-color: #FF4500; */
+  background-color: #04b9d9;
+  color: #2e4359;
+  cursor: pointer;
+
+}
+
+@media(max-width:760px){
+
+  .col{
+    font-size: 1em;
+  }
+  #question{
+    font-family: 'Stylish', sans-serif;
+    font-size: 2.5em;
+  
+  }
+  .quiz-content{
+    margin: 30px;
+    padding: 10px 20px 20px 20px;
+  }
+  
+
+  #score-card,.col{
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 1.3em;
+  }
+  #quiz-tag{
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 2em;
+    margin-bottom: 0px;
+  
+  }
+  #score-card{
+    margin-bottom: 0px;
+    margin-top: 15px;
+    font-size: 1em;
+    float: right;
+  }
+  
+}

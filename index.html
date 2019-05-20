@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./src/js/index.js"></script>
+  <link rel="stylesheet" href="./src/css/index.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Pacifico|Stylish|Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz</title>
+</head>
+<body class="main">
+
+
+  <!--Quiz Content Box-->
+  <div class="container mw-50 quiz-content">
+  <header>
+      <p class="text-left text-uppercase" id="quiz-tag">Quiz</p>
+      <p class="text-uppercase" id="score-card">Your Score:<strong id="score_value">20</strong></p>
+      <hr style="background-color:#04b9d9">
+    </header>
+    <div class="container p-3">
+      <!--Question Comes here!-->
+      <h1 class="display-4 p-2" id="question"></h1>
+    </div>
+    <!--Choices-->
+    <div class="container">
+      <div class="row text-center">
+        <div class="col" id="option1"></div>
+        <div class="col" id="option2"></div>
+        <div class="w-100"></div>
+        <div class="col" id="option3"></div>
+        <div class="col" id="option4"></div>
+      </div>
+    </div>
+  <!--Choices Column ends -->
+
+  </div>
+<!--Quiz Content Box ends-->
+</body>
+
+
+</html>

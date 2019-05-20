@@ -1,0 +1,5 @@
+background:#2e4359,
+text,option:#ececee,
+wrong-red:#ececee,
+correct-green:#009d28
+light-blue:#04b9d9
