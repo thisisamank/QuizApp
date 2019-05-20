@@ -1,2 +1,2 @@
 # Project Description
-clone the project and run `npm start`
+clone the project and run `npm install`
