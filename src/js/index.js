@@ -1,6 +1,8 @@
 let scoreCard=0;
 let tags=[];
 let correctAnswer;
+var questions;
+let indexOfQuestions=0;
 generateTags();
 function generateTags(){
   let options=[1,2,3,4];
@@ -17,18 +19,28 @@ function generateTags(){
 function callThatApi(){
 $.ajax({
   url:'https://opentdb.com/api.php?amount=10&type=multiple',
-  success:loadIntoPage,
-  error:(err)=> console.log(err) 
+  success:loadJsonFromApi,
+  error:(err)=> console.log(err)
 });
 }
 
-function loadIntoPage(fetchedJsonData){
-  let i=0;
-  // while(i<=10){
-    setValues(fetchedJsonData.results[0]);
-  //}
+function loadJsonFromApi(fetchedJsonData){
+  questions=fetchedJsonData.results;
+  console.log(questions);
 }
-
+ function handleOptions() {
+  console.log(questions);
+  console.log(questions[0]+" || "+questions[indexOfQuestions])
+  setValues(questions[0]);
+  $('.options').on('click',(event)=>{
+    if($(event.target).text()==correctAnswer){
+      scoreCard+=10;            
+    };
+    indexOfQuestions++;
+    setValues(indexOfQuestions);
+    console.log(`${event.target}  ${scoreCard}`);
+   });
+}
 function removeBadParts(string) { 
   return string.replace(/(&quot\;)/g,"\"");
  }
@@ -43,3 +55,5 @@ function setValues(singleDataElement) {
   $('#score_value').text(scoreCard);
 }
 callThatApi();
+setTimeout(handleOptions, 5000)
+handleOptions();
