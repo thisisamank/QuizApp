@@ -5,6 +5,6 @@ class Question{
     this.incorrect_answers=incorrect_answers;
   }
   isCorrectAnswer(selectedOption) {
-    return selectedOption===correctAnswer;
+    return selectedOption==this.correct_answer;
   }
 }

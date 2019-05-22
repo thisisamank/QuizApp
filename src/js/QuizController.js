@@ -6,7 +6,6 @@ class QuizController{
   }
   
   getQuestion(){
-    console.log(this.questions[this.questionIndex]);
     return this.questions[this.questionIndex];
   }
 
@@ -15,10 +14,18 @@ class QuizController{
   }
 
   selectedOption(answer){
-    if(this.getQuestion.isCorrectAnswer(answer)){
-      this.scoreCard++;
+    console.log("Called");
+    
+    let correct=false;
+    if(this.getQuestion().isCorrectAnswer(answer)){
+      correct=true;
+      this.score+=10;
     }
     this.questionIndex++;
+    return correct;
   }
 
+  getCurrentScore(){
+    return this.score;
+  }
 }
